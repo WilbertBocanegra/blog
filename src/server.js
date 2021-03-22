@@ -9,9 +9,11 @@ const { PORT, NODE_ENV } = process.env;
 const dev = NODE_ENV === 'development';
 
 
-connect('mongodb://localhost/huimanguilloFood', { useNewUrlParser: true, useUnifiedTopology: true });
+connect('mongo "mongodb+srv://demo.vrszq.mongodb.net/myFirstDatabase" --username wilo', { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
+
 db.on('error', console.error.bind(console, 'connection error:'));
+
 db.once('open', function () {
 	// we're connected!
 	console.log('> Enable MongoDB')
